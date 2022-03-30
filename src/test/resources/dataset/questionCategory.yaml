@@ -1,0 +1,14 @@
+CATEGORY:
+  - ID: 1
+    FULLNAME: "History"
+  - ID: 2
+    FULLNAME: "Fun Facts"
+QUESTION:
+  - ID: 1
+    TEXT: "The text of the question?"
+    ANSWER1: "Answer1"
+    ANSWER2: "Answer1"
+    ANSWER3: "Answer1"
+    ANSWER4: "Answer1"
+    CATEGORYID: 1
+    DIFFICULTY: "EASY"

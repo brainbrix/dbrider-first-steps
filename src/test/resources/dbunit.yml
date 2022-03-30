@@ -1,0 +1,5 @@
+disableSequenceFiltering: true
+properties:
+  caseSensitiveTableNames: true
+  caseInsensitiveStrategy: LOWERCASE
+##  replacers: [!!com.github.database.rider.core.replacers.IncludeReplacer {}, !!com.github.database.rider.core.replacers.NullReplacer {}]

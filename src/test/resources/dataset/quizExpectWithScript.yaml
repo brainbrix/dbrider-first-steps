@@ -1,0 +1,7 @@
+CATEGORY:
+  - ID: "js:(value > 0)"
+    FULLNAME: "js:(value != null && value.length() > 4)"
+  - ID: "groovy:(value > 0)"
+    FULLNAME:  "groovy:(value != null && value.length()>4)"
+  - ID: "regex:\\d+"
+    FULLNAME: "NewCategory"

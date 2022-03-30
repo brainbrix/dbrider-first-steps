@@ -1,0 +1,7 @@
+CATEGORY:
+  - ID: "regex:\\d+" #any number
+    FULLNAME: "History"
+  - ID: "regex:\\d+"
+    FULLNAME: "Fun Facts"
+  - ID: "regex:\\d+"
+    FULLNAME: "NewCategory"
