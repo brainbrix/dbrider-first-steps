@@ -21,7 +21,7 @@ public class QuestionRepositoryTest {
     @Autowired
     private QuestionRepositoryImpl questionRepository;
 
-   // @Test
+    @Test
    // @DataSet("dataset/quiz.yaml")
     void categoryExist() {
         //GIVEN

@@ -34,9 +34,7 @@ import static org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTest
 @TestPropertySource(locations = "classpath:application-test.properties")
 public class CucumberCategorySteps {
 
-
     EntityManagerProvider entityManagerProvider = EntityManagerProvider.newInstance("test");
-
     DataSetExecutor dbunitExecutor;
 
     private CategoryRepository categoryRepository;
@@ -44,18 +42,19 @@ public class CucumberCategorySteps {
 
     @Before
     public void setUp(){
-        dbunitExecutor = DataSetExecutorImpl.instance(new ConnectionHolderImpl(entityManagerProvider.connection()));
-        em().clear();//important to clear JPA first level cache between scenarios
+        dbunitExecutor = DataSetExecutorImpl
+                .instance(new ConnectionHolderImpl(entityManagerProvider.connection()));
+        em().clear();
     }
 
 
     @Given("^we have a list of categories$")
     public void given() {
         categoryRepository = new CategoryRepositoryImpl( em());
-        dbunitExecutor = DataSetExecutorImpl.instance(new ConnectionHolderImpl(entityManagerProvider.connection()));
-        em().clear();//important to clear JPA first level cache between scenarios
+        dbunitExecutor = DataSetExecutorImpl
+                .instance(new ConnectionHolderImpl(entityManagerProvider.connection()));
+        em().clear(); // Clear jpa caches
         dbunitExecutor.createDataSet(new DataSetConfig("dataset/quiz.yaml"));
-   //     assertEquals(em().createQuery("select count(c.id) from Contact c").getSingleResult(), new Long(3));
     }
 
     @When("^we search categories by id \"(\\d+)\"$")
